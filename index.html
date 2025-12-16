@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OmniSoniX: Text-Guided Audio Extraction</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>OmniSoniX</h1>
+    <p>A Unified Model for Text-Prompted Audio Extraction Across Speech, Music, and Sound Events</p>
+    <p>
+      <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">[Paper]</a>
+      <a href="https://github.com/yourname/OmniSoniX" target="_blank">[Code]</a>
+    </p>
+  </header>
+
+  <main>
+    <!-- Example 1 -->
+    <section class="example">
+      <h2>Example 1: Overlapping Speakers + Music</h2>
+      <p><strong>Mixture:</strong> Two speakers (male/female) + background piano</p>
+      
+      <div class="audio-row">
+        <div class="audio-item">
+          <h3>Input Mixture</h3>
+          <audio controls src="assets/audio/ex1_mixture.wav"></audio>
+        </div>
+      </div>
+
+      <div class="audio-grid">
+        <div class="audio-item">
+          <h3>Prompt: "extract the male speaker"</h3>
+          <audio controls src="assets/audio/ex1_male.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <h3>Prompt: "extract the female speaker"</h3>
+          <audio controls src="assets/audio/ex1_female.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <h3>Prompt: "extract piano music"</h3>
+          <audio controls src="assets/audio/ex1_piano.wav"></audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example 2 -->
+    <section class="example">
+      <h2>Example 2: Urban Soundscape</h2>
+      <p><strong>Mixture:</strong> Traffic, dog barking, distant speech</p>
+      
+      <div class="audio-row">
+        <div class="audio-item">
+          <h3>Input Mixture</h3>
+          <audio controls src="assets/audio/ex2_mixture.wav"></audio>
+        </div>
+      </div>
+
+      <div class="audio-grid">
+        <div class="audio-item">
+          <h3>Prompt: "extract dog barking"</h3>
+          <audio controls src="assets/audio/ex2_dog.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <h3>Prompt: "extract car honking"</h3>
+          <audio controls src="assets/audio/ex2_honk.wav"></audio>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with ❤️ | OmniSoniX Demo | © 2024</p>
+  </footer>
+</body>
+</html>
