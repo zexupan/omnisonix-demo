@@ -6,33 +6,52 @@ document.addEventListener('DOMContentLoaded', function() {
     // Disable spectrogram display
     const SHOW_SPECTROGRAMS = false;
     
-    // Sample data structure
-    const categories = [
-        {
-            id: "moisesdb",
-            title: "Music Stem Extraction",
-            description: "Music separation examples from MoisesDB dataset",
-            uids: ["3", "39", "42", "121", "130"]
-        },
-        {
-            id: "audiocaps",
-            title: "Sound Event Extraction",
-            description: "Sound event extraction from AudioCaps dataset",
-            uids: ["1026", "1130", "1994"]
-        },
-        {
-            id: "demand",
-            title: "Speech Enhancement",
-            description: "Speech enhancement examples from DEMAND dataset",
-            uids: ["p232_013", "p257_053", "p257_370"]
-        },
-        {
-            id: "speech",
-            title: "Speaker Extraction",
-            description: "Speaker separation examples",
-            uids: ["125", "1014", "1051", "1070", "10045"]
-        }
-    ];
+    // Load sample data from JSON file
+    fetch('assets/data/samples.json')
+        .then(response => response.json())
+        .then(categories => {
+            // Create sections for each category
+            categories.forEach(category => {
+                const section = createCategorySection(category);
+                mainElement.appendChild(section);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading samples.json:', error);
+            // Fallback to hardcoded data if JSON fails to load
+            const categories = [
+                {
+                    id: "moisesdb",
+                    title: "Music Stem Extraction",
+                    description: "Music separation examples from MoisesDB dataset",
+                    uids: ["3", "39", "42", "121", "130"]
+                },
+                {
+                    id: "audiocaps",
+                    title: "Sound Event Extraction",
+                    description: "Sound event extraction from AudioCaps dataset",
+                    uids: ["1026", "1130", "1994"]
+                },
+                {
+                    id: "demand",
+                    title: "Speech Enhancement",
+                    description: "Speech enhancement examples from DEMAND dataset",
+                    uids: ["p232_013", "p257_053", "p257_370"]
+                },
+                {
+                    id: "speech",
+                    title: "Speaker Extraction",
+                    description: "Speaker separation examples",
+                    uids: ["125", "1014", "1051", "1070", "10045"]
+                }
+            ];
+            
+            // Create sections for each category
+            categories.forEach(category => {
+                const section = createCategorySection(category);
+                mainElement.appendChild(section);
+            });
+        });
     
     // Function to create a section for each category
     function createCategorySection(category) {
@@ -50,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const examplesContainer = document.createElement('div');
         examplesContainer.className = 'category-examples';
         
-        // Create sections for each UID in the category
+        // Create sections for each UID in the category (maintaining order from JSON)
         category.uids.forEach(uid => {
             const exampleSection = createExampleSection(category.id, uid);
             examplesContainer.appendChild(exampleSection);
@@ -194,10 +213,4 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return section;
     }
-    
-    // Create sections for each category
-    categories.forEach(category => {
-        const section = createCategorySection(category);
-        mainElement.appendChild(section);
-    });
 });
