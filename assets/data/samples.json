@@ -1,25 +1,25 @@
 [
   {
     "id": "moisesdb",
-    "title": "MoisesDB Examples",
+    "title": "Song Examples",
     "description": "Music separation examples from MoisesDB dataset",
     "uids": ["130", "42", "121", "3", "39"]
   },
   {
     "id": "audiocaps",
-    "title": "AudioCaps Examples",
+    "title": "General Sound Examples",
     "description": "Sound event extraction from AudioCaps dataset",
     "uids": ["1026", "1994", "1130"]
   },
   {
     "id": "demand",
-    "title": "DEMAND Examples",
+    "title": "Noisy Speech Examples",
     "description": "Speech enhancement examples from DEMAND dataset",
     "uids": ["p257_370", "p232_013", "p257_053"]
   },
   {
     "id": "speech",
-    "title": "Speech Examples",
+    "title": "Multi-talker Speech Examples",
     "description": "Speaker separation examples",
     "uids": ["125", "10045",  "1014", "1051", "1070"]
   }
