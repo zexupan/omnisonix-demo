@@ -24,25 +24,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     id: "moisesdb",
                     title: "Music Stem Extraction",
                     description: "Music separation examples from MoisesDB dataset",
-                    uids: ["3", "39", "42", "121", "130"]
+                    uids: ["130", "42", "121", "3", "39"]
                 },
                 {
                     id: "audiocaps",
                     title: "Sound Event Extraction",
                     description: "Sound event extraction from AudioCaps dataset",
-                    uids: ["1026", "1130", "1994"]
+                    uids: ["1026", "1994", "1130"]
                 },
                 {
                     id: "demand",
                     title: "Speech Enhancement",
                     description: "Speech enhancement examples from DEMAND dataset",
-                    uids: ["p232_013", "p257_053", "p257_370"]
+                    uids: ["p257_370", "p232_013", "p257_053"]
                 },
                 {
                     id: "speech",
                     title: "Speaker Extraction",
                     description: "Speaker separation examples",
-                    uids: ["125", "1014", "1051", "1070", "10045"]
+                    uids: ["125", "10045", "1014", "1051", "1070"]
                 }
             ];
             
