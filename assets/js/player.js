@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const section = document.createElement('div');
         section.className = 'example-subsection';
         
-        // Example header - removed "Sample" prefix
+        // Example header - added back the Sample {uid} display
         const heading = document.createElement('h3');
-        heading.textContent = `${uid}`;  // Just show the UID directly
+        heading.textContent = `Sample ${uid}`;
         heading.className = 'example-title';
         
         // Prompt text
