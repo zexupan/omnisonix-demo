@@ -195,14 +195,6 @@ a:focus {
   flex-grow: 1;
 }
 
-.spectrogram {
-  width: 100%;
-  height: auto;
-  margin-top: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
 footer {
   text-align: center;
   margin-top: 2rem;
