@@ -34,32 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
     
-    // Function to create sidebar navigation
-    function createSidebar() {
-        const sidebar = document.createElement('aside');
-        sidebar.className = 'sidebar';
-        
-        const nav = document.createElement('nav');
-        const navTitle = document.createElement('h3');
-        navTitle.textContent = 'Sections';
-        nav.appendChild(navTitle);
-        
-        const navList = document.createElement('ul');
-        
-        categories.forEach(category => {
-            const listItem = document.createElement('li');
-            const link = document.createElement('a');
-            link.href = `#${category.id}`;
-            link.textContent = category.title;
-            listItem.appendChild(link);
-            navList.appendChild(listItem);
-        });
-        
-        nav.appendChild(navList);
-        sidebar.appendChild(nav);
-        return sidebar;
-    }
-    
     // Function to create a section for each category
     function createCategorySection(category) {
         const section = document.createElement('section');
@@ -220,10 +194,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return section;
     }
-    
-    // Create sidebar and main content
-    const sidebar = createSidebar();
-    document.body.insertBefore(sidebar, mainElement);
     
     // Create sections for each category
     categories.forEach(category => {
