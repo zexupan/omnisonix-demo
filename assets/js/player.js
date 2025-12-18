@@ -72,10 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         heading.id = `${category.id}-heading`;
         heading.textContent = category.title;
         
-        const description = document.createElement('p');
-        description.innerHTML = `<strong>Description:</strong> ${category.description}`;
-        
-        // Container for all examples in this category
+        // Container for all examples in this category (removed description)
         const examplesContainer = document.createElement('div');
         examplesContainer.className = 'category-examples';
         
@@ -87,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Assemble the category section
         section.appendChild(heading);
-        section.appendChild(description);
         section.appendChild(examplesContainer);
         
         return section;
@@ -113,9 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const section = document.createElement('div');
         section.className = 'example-subsection';
         
-        // Example header
+        // Example header - removed "Sample" prefix
         const heading = document.createElement('h3');
-        heading.textContent = `Sample ${uid}`;
+        heading.textContent = `${uid}`;  // Just show the UID directly
         heading.className = 'example-title';
         
         // Prompt text
