@@ -9,8 +9,14 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #fafafa;
-  display: flex;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex: 1;
 }
 
 @media (min-width: 768px) {
@@ -133,11 +139,6 @@ a:focus {
   padding-bottom: 0.5rem;
 }
 
-.example p {
-  margin-bottom: 1rem;
-  color: #555;
-}
-
 .category-examples {
   margin-top: 1.5rem;
 }
@@ -228,6 +229,10 @@ footer {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
   .sidebar {
     width: 100%;
     height: auto;
