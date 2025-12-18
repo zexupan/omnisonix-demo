@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     id: "speech",
-                    title: "Speaker Extraction",
+                    title: "Multi-talker Speech Extraction",
                     description: "Speaker separation examples",
                     uids: ["125", "10045", "1014", "1051", "1070"]
                 }
