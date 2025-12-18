@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create sidebar and main content
     const sidebar = createSidebar();
-    document.body.insertBefore(sidebar, mainElement.parentNode.firstChild);
+    document.body.insertBefore(sidebar, mainElement);
     
     // Create sections for each category
     categories.forEach(category => {
